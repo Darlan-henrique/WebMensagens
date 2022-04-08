@@ -1,0 +1,10 @@
+﻿.logout {
+    width: 320px;
+    height: 420px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    justify-content: center;
+}

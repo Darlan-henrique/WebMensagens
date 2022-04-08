@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaPrincipal.master.cs" Inherits="WebMensagens.PaginaPrincipal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Sistema Web Mensagens</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="CSS/Estilos.css"/>
+    <script type="text/javascript" src="Scripts/FunctionsModal.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+                  <asp:ImageButton ID = "ImageButton1" runat="server" ImageUrl="~/IMAGENS/SISTEMA/logoweb.png" PostBackUrl="~/Default.aspx" CssClass="linkhome"/>
+            <nav>
+              <%-- <h1>Cadastre contatos e envie mensagens</h1>--%>
+                 <asp:HyperLink ID="hlHome" runat="server" CssClass="linkBotoes" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                 <asp:HyperLink ID="hlUsuario" runat="server" CssClass="linkBotoes" NavigateUrl="~/Usuario.aspx">Usuários</asp:HyperLink>
+                 <asp:HyperLink ID="hlContatos" runat="server" CssClass="linkBotoes" NavigateUrl="~/Contatos.aspx">Contatos</asp:HyperLink>
+                 <asp:HyperLink ID="h1Mensagens" runat="server" CssClass="linkBotoes" NavigateUrl="~/Mensagem.aspx">Mensagens</asp:HyperLink>
+                 <asp:HyperLink ID="h1Categorias" runat="server" CssClass="linkBotoes" NavigateUrl="~/Categoria.aspx">Categorias</asp:HyperLink>
+                 <asp:HyperLink ID="hlSair" runat="server" CssClass="linkBotoes" NavigateUrl="~/Login.aspx">Sair</asp:HyperLink>
+                 
+            </nav>
+        </header>
+        <main>
+                 <div>
+                     <div id="cxFloatMsg" class="cxFloatMsg" onclick="HideMsg()">
+                         <h2 id="msgTitulo">Usuario</h2>
+                         <p id="msgTexto">Senha</p>
+                     </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </main>
+        <footer>
+            <p>Back-end Web Mensagens - Site voltado para o adminstrador do sistema</p>
+            <p>Criado por Henrique darlan ©. Todos direitos reservados</p>
+        </footer>
+
+<%--        <script>
+            ShowMsg("Teste esse foi o modal", "Top de mais");
+        </script>--%>
+    </form>
+</body>
+</html>
